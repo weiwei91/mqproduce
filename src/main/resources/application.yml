@@ -1,0 +1,15 @@
+# 配置rabbitmq
+spring:
+  rabbitmq:
+    host: 10.19.141.152
+    port: 6005
+    username: root
+    password: uttUNwtX
+server:
+  port: 81
+
+# 模拟mq消息发送相关信息
+mock:
+  exchange: xalarm_aps_exchange_forward_to_component
+  routingKey: aive
+  body: {"snappedPicUrl":"http://10.33.40.160:6120/pic?=d52i9d7e*82bi993-b19610e8=t1i2m*dp=*7pdi=*1s2i7i9d7=*cb1ab52d4-0a9351e-1b37ed-13ze09s=6537d7","componentId":"aive","happenedTime":1608193913363,"transInfo":null,"alarmEvent":null,"eventType":"aive","uuid":"fdb1281902fc467cb9b3e1095b51fa0d","inputSourceName":"aive","deviceIndexcode":null,"eventLevel":"h","refrencePicUrl":null,"similarity":null,"sourceUuid":"0a04baf37f904225beddc9f8960c40bd","deploymentId":"HIKVISION_AIOP12656_V7_AIOP12656","inputSourceIndexCode":"10000000001310702818","eventOjectiveName":"aive","deploymentName":null,"attribute":"{\"sendTime\":null,\"picUploadInterval\":null,\"channelID\":null,\"dataType\":null,\"picId\":\"/pic?=d52i9d7e*82bi993-b19610e8=t1i2m*dp=*7pdi=*1s2i7i9d7=*cb1ab52d4-0a9351e-1b37ed-13ze09s=6537d7\",\"inputSourceIndexCode\":\"10000000001310702818\",\"dateTime\":\"2020-12-17T08:31:53.363Z\",\"ipAddress\":null,\"portNo\":null,\"recvTime\":null,\"eventState\":\"active\",\"eventDescription\":null,\"activePostCount\":null,\"eventType\":null,\"latitude\":0.0,\"longitude\":0.0,\"targetAttrs\":{\"captureTime\":\"2020-12-17T16:31:51.937+08:00\",\"deviceIndexCode\":null,\"imageServerCode\":null,\"cameraName\":null,\"cameraIndexCode\":\"e5aaa74b5a1842f1bb187c0778c2c852\",\"presetIndexCode\":\"-1\",\"taskId\":\"0d557cbaa95748c6873e00bbf09f460d\",\"ruleId\":\"11ad92e2ffab44d18a130a4601e80cdb\",\"applicationOrderId\":\"XS20201217114005\",\"deviceName\":null,\"extendedAttrs\":null},\"url\":\"http://10.33.40.160:6120/pic?=d52i9d7e*82bi993-b19610e8=t1i2m*dp=*7pdi=*1s2i7i9d7=*cb1ab52d4-0a9351e-1b37ed-13ze09s=6537d7\",\"results\":null,\"aiResults\":[{\"tag\":\"闸门\",\"abilityName\":\"闸门检测\",\"rectDTO\":[{\"polygon\":[{\"x\":\"0.437664\",\"y\":\"0.203573\"},{\"x\":\"0.507283\",\"y\":\"0.191291\"},{\"x\":\"0.508108\",\"y\":\"0.206071\"},{\"x\":\"0.438489\",\"y\":\"0.218352\"}],\"confidence\":918}],\"address\":\"alibaba\",\"eventCode\":null},{\"tag\":\"闸门\",\"abilityName\":\"闸门检测\",\"rectDTO\":[{\"polygon\":[{\"x\":\"0.571567\",\"y\":\"0.180528\"},{\"x\":\"0.639531\",\"y\":\"0.169418\"},{\"x\":\"0.640259\",\"y\":\"0.183491\"},{\"x\":\"0.572295\",\"y\":\"0.194601\"}],\"confidence\":751}],\"address\":\"alibaba\",\"eventCode\":null}]}","eventObjectiveIndexCode":"0d557cbaa95748c6873e00bbf09f460d","inputSourceType":null}

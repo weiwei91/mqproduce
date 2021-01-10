@@ -1,10 +1,10 @@
 # 配置rabbitmq
 spring:
   rabbitmq:
-    host: 10.19.141.152
-    port: 6005
-    username: root
-    password: uttUNwtX
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 server:
   port: 81
 

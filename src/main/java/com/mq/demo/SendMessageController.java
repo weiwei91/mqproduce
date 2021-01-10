@@ -33,7 +33,6 @@ public class SendMessageController {
     String exchange;
     @Value("${mock.routingKey}")
     String routingKey;
-    @Value("${mock.body}")
     String body;
 
     @Autowired

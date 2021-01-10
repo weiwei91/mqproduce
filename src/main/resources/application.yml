@@ -5,13 +5,16 @@ spring:
       missing-topics-fatal: false
     bootstrap-servers: 10.19.141.40:29092
     producer:
-      retries: 0
       batch-size: 16384
       buffer-memory: 33554432
       key-serializer: org.apache.kafka.common.serialization.StringSerializer
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       properties:
         linger.ms: 1
+      #确保每条数据必须是写入所有的replica才认为消息写成功
+      acks: all
+      #当认为消息写入失败的时候，会重试
+      retries: 10000
 
     consumer:
       enable-auto-commit: false

@@ -19,7 +19,6 @@ public class IndicatorService {
     private Logger LOG = LoggerFactory.getLogger(IndicatorService.class);
 
     private final KafkaTemplate<Integer, String> kafkaTemplate;
-
     /**
      * 注入KafkaTemplate
      * @param kafkaTemplate kafka模版类

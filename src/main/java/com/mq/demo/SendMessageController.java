@@ -16,7 +16,7 @@ public class SendMessageController {
 
     @RequestMapping(value = "/sendMessage",method = RequestMethod.GET)
     @ResponseBody
-    public String getCameras(@RequestParam(value = "name",required = false) String name) {
+    public String sendMessage(@RequestParam(value = "name",required = false) String name) {
         indicatorService.sendMessage("topic1","ceshi");
         return "ok";
     }

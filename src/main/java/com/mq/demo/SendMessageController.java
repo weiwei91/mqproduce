@@ -9,8 +9,8 @@ import org.springframework.amqp.core.Queue;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.HashMap;
@@ -56,6 +56,13 @@ public class SendMessageController {
         properties.setContentEncoding("UTF-8");
         Message message = rabbitTemplate.getMessageConverter().toMessage(body, properties);
         rabbitTemplate.convertAndSend(exchange, routingKey, body);
+        return "ok";
+    }
+
+    @RequestMapping(value = {"/testSendTopic"},method = {RequestMethod.GET,RequestMethod.POST})
+    @ResponseBody
+    public String testSendTopic(){
+        rabbitTemplate.convertSendAndReceive("testtopic", "china", "123");
         return "ok";
     }
 
